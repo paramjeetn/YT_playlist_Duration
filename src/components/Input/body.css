@@ -1,0 +1,53 @@
+/* body.css */
+
+.Body {
+  width: 100%;
+  margin: 40px;
+  padding: 20px;
+  background-color: #f7f7f7;
+  border: 1px solid #ddd;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 15px; /* add a curved border */
+}
+
+h2 {
+  margin-top: 0;
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.input-container input {
+  flex: 1;
+  margin-right: 10px;
+}
+
+.button {
+  margin-left: 10px;
+}
+
+p {
+  margin-bottom: 20px;
+}
+
+.number-inputs {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.number-inputs > * {
+  flex: 1;
+  margin: 0 10px;
+}
+
+.number-inputs > *:first-child {
+  margin-left: 0;
+}
+
+.number-inputs > *:last-child {
+  margin-right: 0;
+}
