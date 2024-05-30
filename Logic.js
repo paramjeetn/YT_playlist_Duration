@@ -56,8 +56,7 @@ async function getVideoList(playlistId, nextPageToken = '') {
   }
   async function getPlaylistLength(playlistId) {
       let nextPageToken = '';
-    //   let totalDuration = 0;
-    //   let videoCount = 0;
+   
       const videoDurations = []; // Array to store video durations
       const videoDurationsById = {}; // Object to store durations by video ID
     
@@ -72,25 +71,15 @@ async function getVideoList(playlistId, nextPageToken = '') {
           if (!videoDurationsById[videoId]) {
             videoDurationsById[videoId] = duration;
             videoDurations.push(duration);
-            // videoCount++;
-            // totalDuration += duration;
+            
           }
         }
     
         nextPageToken = newNextPageToken;
       } while (nextPageToken);
     
-    //   console.log('Video durations:', videoDurations); // List of all unique video durations
       return videoDurations;
-    //   console.log('Number of videos:', videoCount);
-    //   const averageLength = videoCount ? totalDuration / videoCount : 0;
-    //   console.log('Average video length:', averageLength, 'seconds');
-    //   console.log('Total playlist length:', totalDuration, 'seconds');
     
-    //   const playbackRates = [1.25, 1.5, 1.75, 2];
-    //   for (const rate of playbackRates) {
-    //     console.log(`At ${rate}x speed:`, totalDuration / rate, 'seconds');
-    //   }
     }
     
 
@@ -122,10 +111,4 @@ function getTotalDuration(json, startIndex, endIndex) {
   return totalDuration;
 }
 
-const form = {
-  url: 'https://www.youtube.com/watch?v=0bHoB32fuj0&list=PLgUwDviBIf0oF6QL8m22w1hIDC1vJ_BHz',
-  startVideo: 0,
-  endVideo: -1,
-};
 
-// GetPlaylistInfo(form).then(result => console.log(result));
